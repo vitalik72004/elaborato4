@@ -27,7 +27,7 @@ unsigned short int nth_prime(unsigned short int n) {
 
 
 unsigned short int succ_prime(int reset) {
-
+	return 0;
 }
 
 
