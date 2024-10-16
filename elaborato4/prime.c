@@ -4,7 +4,7 @@
 
 #define numFunctions 4
 
-#define numTest 4
+#define numTest 3
 
 int main() {
 	int i, index, cont_err, cont_all;
