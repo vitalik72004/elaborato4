@@ -20,9 +20,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main_stu.c">
-      <Filter>File di origine</Filter>
-    </ClCompile>
     <ClCompile Include="prime.c">
       <Filter>File di origine</Filter>
     </ClCompile>

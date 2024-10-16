@@ -1,40 +1,37 @@
-//Uncomment to run in test mode
-//#define TEST_MODE
-
-//Uncomment to perform hard testing (only for TEST_MODE). Warning: it can be slow.
-//#define HARD
-
-#ifndef PRIME_H
-#define PRIME_H
+#include <math.h>
 
 
-/* Ritorna 1 se n e' primo, 0 altrimenti. */
-unsigned short int is_prime(unsigned short int n);
+unsigned short int is_prime(unsigned short int n) {
+	int i;
+	if (n <= 1) return 0;
 
-/*
- * Ritorna l'n-esimo primo, contando a partire da 0.
- *
- * Se il numero e' troppo grande per essere rappresentato
- * con un unsigned short int, ritorna 0.
- */
-unsigned short int nth_prime(unsigned short int n);
+	if (n == 2) return 1;
 
-/* Ritorna la successione di numeri primi.
- * La prima chiamata ritorna 2, la seconda 3, ecc.
- *
- * Se il parametro reset e' diverso da 0, allora la
- * successione viene resettata e la funzione ritorna 2.
- * Diversamente, la funzione ritorna il primo successivo
- * a quello ritornato alla chiamata precedente.
- *
- * Se il primo successivo e' troppo grande per essere
- * rappresentato con un unsigned short int, la funzione
- * ritorna 0 e la successione viene resettata.
- */
-unsigned short int succ_prime(int reset);
+	for (i = 3; i <= sqrt(n); i+=2)
+		if (n % i == 0)
+			return 0;
+	return  1;
+}
 
-/* Ritorna 1 se m e n sono coprimi, 0 altrimenti. */
-unsigned short int co_prime(unsigned short int m,
-    unsigned short int n);
+unsigned short int nth_prime(unsigned short int n) {
+	int num_pri = 0, i = 0;
+	while (num_pri <= n)
+	{
+		if (is_prime(i) == 1)
+			num_pri++;
+		i++;
+	}
+	return  i;
+}
 
-#endif
+
+
+unsigned short int succ_prime(int reset) {
+	return  0;
+}
+
+
+unsigned short int co_prime(unsigned short int m, unsigned short int n) {
+	return 0;
+}
+

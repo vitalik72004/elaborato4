@@ -186,7 +186,6 @@
     <ClInclude Include="prime.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main_stu.c" />
     <ClCompile Include="prime.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
