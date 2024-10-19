@@ -42,6 +42,7 @@ unsigned short int succ_prime(int reset) {
 
 	while (1)
 	{
+		current_int++;
 		if (is_prime(current_int))
 		{
 			unsigned short int res = current_int;
@@ -54,7 +55,6 @@ unsigned short int succ_prime(int reset) {
 			}
 			return res;
 		}
-		current_int++;
 	}
 }
 
